@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Donateditem = ({ item }) => {
+const Ditem = ({ item }) => {
     const { image, category_name, title,id,bg_color,text_color,text_bg_color,price } = item
     return (
         <div>
@@ -22,4 +22,4 @@ const Donateditem = ({ item }) => {
     );
 };
 
-export default Donateditem;
+export default Ditem;

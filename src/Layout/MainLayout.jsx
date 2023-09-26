@@ -3,7 +3,8 @@ import Root from '../Pages/Root/Root';
 import Home from '../Pages/Home/Home';
 import Donation from '../components/Donation/Donation';
 import Statistics from '../components/Statistics/Statistics';
-import Donatedetail from '../Pages/DonateDetail/Donatedetail';
+import DitemDetail from '../Pages/DonateDetail/DitemDetail';
+
 
 const Routes = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const Routes = createBrowserRouter([
             {
                 path:'/home/:id',
                 loader:()=> fetch('../data.json'),
-                element:<Donatedetail></Donatedetail>
+                element:<DitemDetail></DitemDetail>
             }
         ]
     }

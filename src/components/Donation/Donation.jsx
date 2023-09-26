@@ -1,25 +1,32 @@
 import { useEffect, useState } from "react";
-import Donateditem from "../Donateditem/Donateditem";
+import Ditem from "../Donateditem/Ditem";
 
 const Donation = () => {
-
-    const [nodonated,setNodonated] =useState('')
+    const [display, setDisplay] = useState(4)
+    const [nodonated, setNodonated] = useState('')
     const items = JSON.parse(localStorage.getItem('donateditem'))
-    useEffect(()=>{
-    if(items){
-        setNodonated(true)
-    }else{
-        setNodonated(false)
-    }
-    },[items])
+    useEffect(() => {
+        if (items) {
+            setNodonated(true)
+        } else {
+            setNodonated(false)
+        }
+    }, [items])
     return (
-        <div className={nodonated ?'grid grid-cols-2 grid-rows-2 container mx-auto gap-6':''}>
-         {
-            nodonated ? items.map(item => <Donateditem  key={item.id} item={item} ></Donateditem>):<div>
-                <h3 className="h-[60vh] font-bold text-3xl flex  justify-center items-center ">No donated Item Found</h3>
+        <div>
+            <div className={nodonated ? 'grid grid-cols-2 container mx-auto gap-6' : ''}>
+                {
+                    nodonated ? items.slice(0, display).map(item => <Ditem key={item.id} item={item} ></Ditem>) : <div>
+                        <h3 className="h-[60vh] font-bold text-3xl flex  justify-center items-center ">No donated Item Found</h3>
+                    </div>
+
+                }
+
+
             </div>
-             
-         }
+            <div className={display === items?.length ||  items?.length <4  ? 'hidden' : 'flex justify-center items-center my-8'}>
+                <button className="btn btn-accent text-white " onClick={() => setDisplay(items?.length)} >Show All </button>
+            </div>
         </div>
     );
 };

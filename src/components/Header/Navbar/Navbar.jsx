@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <div>
 
-            <div className="navbar bg-base-100 container mx-auto my-10">
+            <div className=" navbar bg-base-100 container mx-auto my-10 flex-col lg:flex-row space-y-8 lg:space-y-0">
                 <div className="navbar-start">
                     <Link to={'/'}>
                         <img src={logo} alt="" />
