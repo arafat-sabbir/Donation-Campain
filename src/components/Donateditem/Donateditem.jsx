@@ -2,18 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Donateditem = ({ item }) => {
-
-    const [nodonated,setNodonated] =useState('')
-    if(item){
-        setNodonated(false)
-    }else{
-        setNodonated(true)
-    }
     const { image, category_name, title,id,bg_color,text_color,text_bg_color,price } = item
     return (
         <div>
            {
-            nodonated ? <h3 className="text-3xl font-semibold flex h-screen justify-center items-center">No donated Item Found</h3>: <div className="card card-side bg-base-100 shadow-xl w-[748px]" style={{background:bg_color}}>
+           <div className="card card-side bg-base-100 shadow-xl w-[748px]" style={{background:bg_color}}>
             <figure><img src={item.image} className="w-[330px] h-[230px]" alt="Movie" /></figure>
             <div className="card-body">
             <h3 style={{ color:text_color}}> <span className='px-2.5 rounded-md font-medium' style={{backgroundColor:text_bg_color}}>{category_name}</span> </h3>
