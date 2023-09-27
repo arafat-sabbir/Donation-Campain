@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div className="">
           <div className="mb-24"><Banner handlesearchvalue={handlesearchvalue} handlesearchbtn={handlesearchbtn} ></Banner></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto my-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container lg:mx-auto md:mx-4 mx-10 my-12">
           {
             Alldata.map(singledata => <Card key={singledata.id} singledata={singledata}></Card>)
           }

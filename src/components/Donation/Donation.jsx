@@ -14,7 +14,7 @@ const Donation = () => {
     }, [items])
     return (
         <div>
-            <div className={nodonated ? 'grid grid-cols-2 container mx-auto gap-6' : ''}>
+            <div className={nodonated ? 'grid lg:grid-cols-2 container mx-auto md:my-12 lg:my-0 gap-6' : ''}>
                 {
                     nodonated ? items.slice(0, display).map(item => <Ditem key={item.id} item={item} ></Ditem>) : <div>
                         <h3 className="h-[60vh] font-bold text-3xl flex  justify-center items-center ">No donated Item Found</h3>
@@ -24,9 +24,11 @@ const Donation = () => {
 
 
             </div>
-            <div className={display === items?.length ||  items?.length <4  ? 'hidden' : 'flex justify-center items-center my-8'}>
+            {
+                items?.length?<div className={display === items?.length ||  items?.length <4  ? 'hidden' : 'flex justify-center items-center my-8'}>
                 <button className="btn btn-accent text-white " onClick={() => setDisplay(items?.length)} >Show All </button>
-            </div>
+            </div>:''
+            }
         </div>
     );
 };
