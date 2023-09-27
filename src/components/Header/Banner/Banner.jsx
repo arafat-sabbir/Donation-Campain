@@ -1,4 +1,4 @@
-const Banner = () => {
+const Banner = ({handleSubmit}) => {
     return (
         <div>
 
@@ -10,10 +10,10 @@ const Banner = () => {
                         <div className="form-control">
                         <h3 className="font-bold text-xl md:text-3xl  lg:text-5xl mb-10">I Grow By Helping People In Need</h3>
                             <div className="input-group flex justify-center ">
-                                <input   type="text" placeholder="Search…" className="input input-bordered lg:w-[470px]  h-[60px]" />
-                                <button  className="py-4 px-7 text-white font-semibold bg-[#FF444A]">
-                                Search
-                                </button>
+                                <form onSubmit={handleSubmit} >
+                                <input name="text"  type="text" placeholder="Search…" className="input input-bordered lg:w-[470px]  h-[60px]" />
+                                <input  className="py-4 px-7 text-white font-semibold bg-[#FF444A]" type="submit" value="Search" />
+                                </form>
                             </div>
                         </div>
                     </div>

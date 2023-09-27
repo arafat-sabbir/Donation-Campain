@@ -7,8 +7,8 @@ const Card = ({ singledata }) => {
     return (
         <div>
             <Link to={`/home/${id}`}>
-                <div  className="card w-[332px] h-[300px] bg-base-100 shadow-xl rounded-lg" style={{ background: bg_color }}>
-                    <figure><img src={image} className='w-full h-[230px]' alt="Shoes" /></figure>
+                <div  className="card  h-[300px] bg-base-100 shadow-xl rounded-lg" style={{ background: bg_color }}>
+                    <figure><img style={{objectFit:'cover'}} src={image} className='w-full h-[230px]' alt="Shoes" /></figure>
 
                     <div className={`px-4 py-4`}>
                         <h3 style={{ color: text_color }}> <span className='px-2.5 rounded-md font-medium' style={{ backgroundColor: text_bg_color }}>{category_name}</span> </h3>
