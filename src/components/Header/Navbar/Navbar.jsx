@@ -10,7 +10,7 @@ const Navbar = () => {
                         <img src={logo} alt="" />
                     </Link>
                 </div>
-                <div className="navbar-end gap-10">
+                <div className="navbar-end ml-12 md:ml-0 md:mr-40 lg:mr-0  gap-10">
                     <NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
