@@ -6,7 +6,7 @@ const DitemDetail = () => {
     const donatedData = useLoaderData()
     const { id } = useParams()
     const clickedData = donatedData?.find(donatedOne => donatedOne.id == id)
-    const { image, title, description, price, text_color } = clickedData
+    const { image, title, description, price,text_color } = clickedData
 
     const handleClicked = () => {
 
@@ -29,8 +29,8 @@ const DitemDetail = () => {
         }
     }
     return (
-        <div className="container mx-auto my-8 w-[90vw]">
-            <div className="flex flex-col items-center md:w-[90vw] lg:w-auto mx-auto ">
+        <div className="container mx-auto my-8">
+              <div className="flex flex-col items-center md:w-[90vw] lg:w-auto mx-auto ">
                 <img className="  lg:w-[1230px] md:w-[90vw] md:h-[700px]  rounded-lg md:relative " src={image} alt="" />
                 <button style={{ background: text_color }} className=" my-4 md:my-0 md:absolute lg:left-[360px] md:-bottom-[85px] md:left-12 lg:bottom-[120px] bottom-2 left-24 text-white py-3.5 px-7 z-50  rounded-lg" onClick={handleClicked}>Donate ${price}</button>
             </div>
@@ -49,7 +49,6 @@ const DitemDetail = () => {
 
                 </div>
             </div>
-
         </div>
 
 
