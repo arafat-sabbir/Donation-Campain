@@ -30,7 +30,7 @@ const DitemDetail = () => {
     }
     return (
         <div className="container mx-auto my-8">
-            <div className="relative">
+            <div className="relative lg:w-auto w-[90vw] mx-auto">
                 <img className=" w-full rounded-lg" src={image} alt="" />
                 <div className="bg-[#0000006e] p-5 lg:p-10 absolute w-full bottom-0 rounded-lg">
                     <button className="py-3.5 px-7 rounded-lg" style={{ background: text_color }} onClick={handleClicked}>
