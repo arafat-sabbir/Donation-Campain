@@ -21,7 +21,7 @@ const Home = () => {
     },[])
     return (
         <div className="">
-          <div className="mb-24"><Banner handleSubmit={handleSubmit} ></Banner></div>
+          <div className="mb-24"><Banner handleSubmit={handleSubmit}></Banner></div>
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-8 container  mx-auto  my-12 w-[90%] lg:w-[100%] ">
           {
             showdata.map(singledata => <Card key={singledata.id} singledata={singledata}></Card>)
