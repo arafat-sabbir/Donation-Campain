@@ -4,7 +4,7 @@ import Piecharts from '../PieCharts/Piecharts';
 
 const Statistics = () => {
     return (
-        <div className='h-[70vh]  flex justify-center items-center'>
+        <div className='h-[70vh] w-[90vw] mx-auto  flex justify-center items-center'>
           <Piecharts></Piecharts>
         </div>
     );

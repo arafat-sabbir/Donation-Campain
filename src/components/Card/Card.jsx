@@ -6,7 +6,7 @@ const Card = ({ singledata }) => {
 
     return (
         <div>
-            <Link to={`/home/${id}`}>
+            <Link to={`/donationdetail/${id}`}>
                 <div  className="card  h-[300px] bg-base-100 shadow-xl rounded-lg" style={{ background: bg_color }}>
                     <figure><img style={{objectFit:'cover'}} src={image} className='w-full h-[230px]' alt="Shoes" /></figure>
 

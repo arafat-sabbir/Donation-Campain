@@ -12,6 +12,7 @@ const Piecharts = () => {
                 fontSize: 16
             },
         },
+        sliceVisibilityThreshold:0,
         slices: { 0: { color: '#00C49F' }, 1: { color: '#FF444A' } }
     };
 
@@ -36,7 +37,7 @@ const Piecharts = () => {
                 chartType="PieChart"
                 data={data}
                 options={options}
-                width={"150%"}
+                width={"90vw"}
                 height={"500px"}
             />
         </div>

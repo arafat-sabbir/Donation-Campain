@@ -12,7 +12,7 @@ const Ditem = ({ item }) => {
             <h3 style={{ color:text_color}}> <span className='px-2.5 rounded-md font-medium' style={{backgroundColor:text_bg_color}}>{category_name}</span> </h3>
                 <p className="text-[#0B0B0B] font-semibold md:text-xl" >{title}</p>
                 <h3 style={{color:text_color}} className="mb-4 font-semibold">${price}.00</h3>
-                <Link to={`/home/${id}`} className="card-actions">
+                <Link to={`/donationdetail/${id}`} className="card-actions">
                     <button style={{background:text_color}} className="btn text-white">Show Details</button>
                 </Link>
             </div>

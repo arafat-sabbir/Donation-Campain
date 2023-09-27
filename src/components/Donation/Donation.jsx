@@ -14,7 +14,7 @@ const Donation = () => {
     }, [items])
     return (
         <div>
-            <div className={nodonated ? 'grid lg:grid-cols-2 container  md:my-12 lg:my-0 gap-6 md:w-[90%] mx-auto' : ''}>
+            <div className={nodonated ? 'grid lg:grid-cols-2 container  md:my-12 lg:my-0 gap-6 mx-auto' : ''}>
                 {
                     nodonated ? items.slice(0, display).map(item => <Ditem key={item.id} item={item} ></Ditem>) : <div>
                         <h3 className="h-[60vh] font-bold text-3xl flex  justify-center items-center ">No donated Item Found</h3>
