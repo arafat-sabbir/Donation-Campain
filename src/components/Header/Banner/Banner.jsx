@@ -3,7 +3,7 @@ const Banner = ({handleSubmit}) => {
         <div>
 
 
-            <div className="flex h-[50vh] md:h-[70vh] lg:h-[40vh] justify-center items-center flex-col">
+            <div className="flex h-[50vh] md:h-[70vh]  justify-center items-center flex-col">
                 <div
                     className="w-[99vw] h-full bg-[url('https://i.ibb.co/1zPksDk/fc1f79e18cdc1a12320b9b10ec3e253d.jpg')] bg-cover bg-center">
                     <div className="w-full h-full flex  justify-center items-center  hero-overlay bg-white bg-opacity-90  ">

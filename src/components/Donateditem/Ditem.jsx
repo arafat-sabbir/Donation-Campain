@@ -6,7 +6,7 @@ const Ditem = ({ item }) => {
     return (
         <div>
            {
-           <div className="card md:card-side ml-8 md:ml-0 bg-base-100 shadow-xl w-[360px] md:w-[748px] mx-2 md:mx-0" style={{background:bg_color}}>
+           <div className="card md:card-side bg-base-100 shadow-xl w-[90vw] lg:w-auto  md:w-[90vw] mx-auto" style={{background:bg_color}}>
             <figure><img src={item.image} className="md:w-[330px] md:h-[230px]" alt="Movie" /></figure>
             <div className="card-body">
             <h3 style={{ color:text_color}}> <span className='px-2.5 rounded-md font-medium' style={{backgroundColor:text_bg_color}}>{category_name}</span> </h3>
